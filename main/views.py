@@ -1,6 +1,6 @@
 from rest_framework import generics, filters
-from .models import Product
-from .serializers import ProductSerializer
+from .models import Product, Category
+from .serializers import ProductSerializer, CategorySerializer
 
 class ProductListAPIView(generics.ListAPIView):
     queryset = Product.objects.all()
@@ -15,3 +15,8 @@ class ProductListAPIView(generics.ListAPIView):
         if promotional_products is not None:
             queryset = queryset.filter(promotional_products=promotional_products)
         return queryset
+
+
+class CategoryListAPIView(generics.ListAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
