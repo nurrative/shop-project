@@ -16,7 +16,9 @@ class Product(models.Model):
     description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     promotional_products = models.BooleanField(default=False)
+    #товары по акции
     available = models.BooleanField(default=True)
+    #для проверки доступен ли данный товар или нет
 
     SIZE_CHOICES = [
         ('s', 'S'),
