@@ -18,12 +18,9 @@ class Product(models.Model):
     available = models.BooleanField(default=True)
 
     SIZE_CHOICES = [
-        ('xs', 'xs'),
-        ('s', 's'),
-        ('m', 'm'),
-        ('l', 'l'),
-        ('xl', 'xl'),
-
+        ('s', 'S'),
+        ('m', 'M'),
+        ('l', 'L'),
     ]
 
     def __str__(self):
