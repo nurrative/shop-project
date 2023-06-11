@@ -10,6 +10,7 @@ class ProductSerializer(ModelSerializer):
         model = Product
         fields = '__all__'
 
+
 class ProductImageSerializer(ModelSerializer):
     class Meta:
         model = ProductImage

@@ -4,6 +4,8 @@ from rest_framework import generics, filters
 from .models import Product, Category
 from .serializers import ProductSerializer, CategorySerializer
 from rest_framework.exceptions import APIException
+
+
 class ProductListAPIView(generics.ListAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
